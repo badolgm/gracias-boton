@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NoEsDudaSonGracias</title>
+<style>
+body{margin:0;padding:20px;font-family:Arial,sans-serif;background:linear-gradient(135deg,#667eea,#764ba2);min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+#b{background:linear-gradient(45deg,#ff6b6b,#4ecdc4);border:none;color:#fff;padding:15px 30px;font-size:18px;border-radius:50px;cursor:pointer;transition:0.3s;box-shadow:0 4px 15px rgba(31,38,135,0.3)}
+#b:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(31,38,135,0.4)}
+#m{text-align:center;color:#fff;margin-top:20px;display:none}
+.heart{color:#ff6b6b;font-size:2em;animation:beat 1.5s infinite}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.s{position:absolute;width:4px;height:4px;background:#fff;border-radius:50%;animation:spark 3s linear infinite}
+@keyframes spark{0%{opacity:0;transform:translateY(0) scale(0)}50%{opacity:1;transform:translateY(-50px) scale(1)}100%{opacity:0;transform:translateY(-100px) scale(0)}}
+</style>
+</head>
+<body>
+<div id="spark"></div>
+<button id="b">🎯 NoEsDudaSonGracias 🎯</button>
+<div id="m">
+<div class="heart">💝</div>
+<h2>ALURA LATAM</h2>
+<p>¡GRACIAS INFINITAS!</p>
+<p>Por abrir puertas que creía cerradas para siempre.<br>
+Por transformar mi curiosidad en herramientas reales.<br>
+Por demostrarme que nunca es tarde para reinventarse.<br>
+<strong>Mi proyecto SIG&T-Rural</strong> nació aquí, en sus aulas virtuales.</p>
+<div class="heart">❤️ 🚀 💻 🌾 ❤️</div>
+</div>
+<script>
+const b=document.getElementById('b'),m=document.getElementById('m'),s=document.getElementById('spark');
+b.onclick=function(){
+  m.style.display='block';
+  b.style.display='none';
+  for(let i=0;i<30;i++){
+    setTimeout(()=>{
+      let sp=document.createElement('div');
+      sp.className='s';
+      sp.style.left=Math.random()*100+'%';
+      sp.style.animationDelay=Math.random()*3+'s';
+      s.appendChild(sp);
+      setTimeout(()=>sp.remove(),3000);
+    },i*80);
+  }
+}
+</script>
+</body>
+</html>
