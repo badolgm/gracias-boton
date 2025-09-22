@@ -68,9 +68,9 @@ Consulta el archivo [LICENSE](./LICENSE) para más detalles.
 
 ## ✉️ Contacto  
 
-📌 Autor: **[Tu Nombre]**  
-🌐 GitHub: [@TuUsuario](https://github.com/TuUsuario)  
-📩 Email: tuemail@example.com  
+📌 Autor: **Bernardo Adolfo Gómez Montoya**  
+🌐 GitHub: [@badolgm](https://github.com/badolgm)  
+📩 Email: badolfogm@gmail.com  
 
 ---
 
